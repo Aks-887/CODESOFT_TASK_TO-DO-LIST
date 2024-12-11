@@ -51,9 +51,9 @@ def retrieve_database():
 if __name__ == "__main__":   
     guiWindow = Tk()   
     guiWindow.title("To-Do List")  
-    guiWindow.geometry("750x450+500+200")  # Updated dimensions
+    guiWindow.geometry("750x450+500+200") 
     guiWindow.resizable(0, 0)  
-    guiWindow.configure(bg="#FFE4B5")  # Changed background color
+    guiWindow.configure(bg="#FFE4B5") 
    
     the_connection = sql.connect('listOfTasks.db')   
     the_cursor = the_connection.cursor()   
@@ -61,15 +61,15 @@ if __name__ == "__main__":
     
     tasks = []  
         
-    functions_frame = Frame(guiWindow, bg="#F5DEB3")  # Changed frame color
+    functions_frame = Frame(guiWindow, bg="#F5DEB3")
     functions_frame.pack(side="top", expand=True, fill="both")  
   
     task_label = Label(
         functions_frame,
         text="TO-DO-LIST \n Enter the Task Title:",  
         font=("Arial", 14, "bold"),  
-        background="#F5DEB3",  # Changed label background color
-        foreground="#8B4513"  # Changed text color
+        background="#F5DEB3",  
+        foreground="#8B4513" 
     )    
     task_label.place(x=20, y=30)  
         
@@ -86,7 +86,7 @@ if __name__ == "__main__":
         functions_frame,  
         text="Add",  
         width=15,
-        bg='#FFA07A', font=("Arial", 12, "bold"),  # Changed button colors
+        bg='#FFA07A', font=("Arial", 12, "bold"),
         command=add_task,
     )  
     del_button = Button(  
